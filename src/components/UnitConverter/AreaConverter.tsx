@@ -21,9 +21,12 @@ const AreaConverter = () => {
 
   const handleConvert = () => {
     const key = `${fromUnit}-to-${toUnit}`;
+    console.log("Conversion key:", key); // Debugging log
     const convert = areaConversions[key];
     if (convert) {
-      setResult(convert(value));
+      const convertedValue = convert(value);
+      console.log("Converted value:", convertedValue); // Debugging log
+      setResult(convertedValue);
     } else {
       setResult(null);
     }
@@ -48,7 +51,7 @@ const AreaConverter = () => {
         type="number"
         value={value}
         onChange={(e) => setValue(parseFloat(e.target.value))}
-        className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-2"
+        className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-2 text-black"
       />
       <div className="flex space-x-4 mb-2">
         <select
@@ -77,7 +80,7 @@ const AreaConverter = () => {
       </div>
       <button
         onClick={handleConvert}
-        className="bg-blue-500  px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-black"
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
       >
         Convert
       </button>
