@@ -45,8 +45,8 @@ const RandomNumberGenerator = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="bg-blue-300 p-8 rounded-lg shadow-md w-full max-w-md">
+    <div className=" min-h-screen flex items-center justify-center">
+      <div className=" p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4 text-center">
           Random 11-Digit Number Generator
         </h1>

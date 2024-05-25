@@ -8,11 +8,17 @@ import AreaConverter from "@/components/UnitConverter/AreaConverter";
 import MassConverter from "@/components/UnitConverter/MassConverter";
 import VolumeConverter from "@/components/UnitConverter/VolumeConverter";
 import TemperatureConverter from "@/components/UnitConverter/TemperatureConverter";
+import FakeDataPage from "./fakes/page";
+import Link from "next/link";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+        <Link className="text-9xl font-bold " href="/fakes">
+          Fakes
+        </Link>
+      </div>
       <NID />
 
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
