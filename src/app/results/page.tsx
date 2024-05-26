@@ -1,10 +1,10 @@
-import Result from "@/components/Results/Result";
+import PdfResults from "@/components/Results/PdfResults";
 import React from "react";
 
 const ResultsPage: React.FC = () => {
   return (
     <div>
-      <Result />
+      <PdfResults />
     </div>
   );
 };
